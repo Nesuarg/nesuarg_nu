@@ -1,1 +1,1 @@
-# nesuarg_nu
+# nesuarg.nu blog

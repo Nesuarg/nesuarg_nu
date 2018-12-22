@@ -1,12 +1,10 @@
-$bg-color: yellow;
-$border-color: red;
+@import "settings.scss";
+#root, .app {
+  height: 100%;
+}
 
 .app {
+  display: flex;
+  flex-direction: column;
   font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid $border-color;
-
-  p {
-    background-color: $bg-color;
-  }
 }

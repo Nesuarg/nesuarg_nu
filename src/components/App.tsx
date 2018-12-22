@@ -1,17 +1,22 @@
 import * as React from "react";
+import "./../assets/scss/Reset.scss";
 import "./../assets/scss/App.scss";
+import "./../components/Contact";
+import Header from "./../components/Header";
+import Main from "./../components/Main";
+import Footer from "./../components/Footer";
 
-const reactLogo = require("./../assets/img/react_logo.svg");
+export const appName = React.createContext("default value");
 
 export interface AppProps {
-}
+}export default class App extends React.Component<AppProps, undefined> {
 
-export default class App extends React.Component<AppProps, undefined> {
     render() {
         return (
             <div className="app">
-                <h1>Nesuarg.nu</h1>
-                <img src={reactLogo} height="480"/>
+                <Header/>
+                <Main/>
+                <Footer name="Jannik Fischer"/>
             </div>
         );
     }

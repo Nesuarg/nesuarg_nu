@@ -12,7 +12,7 @@ export interface MainProps {
             <main className="main">
             <Switch>
               <Route exact path='/' component={Home}/>
-              <Route path='/Contact' component={Contact}/>
+              <Route path='/contact' component={Contact}/>
             </Switch>
           </main>
         );

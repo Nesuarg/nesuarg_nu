@@ -18,7 +18,7 @@ export interface ContactProps {
     }
 
     handleSubmit = e => {
-        fetch("/contact", {
+        fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...this.state })
@@ -35,6 +35,7 @@ export interface ContactProps {
         const { name, email, message } = this.state as ContactProps;
         return (
           <form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
+          <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>
                 Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />

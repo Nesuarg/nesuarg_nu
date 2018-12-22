@@ -1,15 +1,14 @@
-@import "settings.scss";
 .header {
     padding: 15px;
 
     ul {
         display: flex;
         justify-content: center;
-        color: $primary-color;
-        border-bottom: 1px solid $primary-color;
+        color: #535353;
+        border-bottom: 1px solid #535353;
         
         li {
-            padding: $gutter;
+            padding: 15px;
         }
     }
     

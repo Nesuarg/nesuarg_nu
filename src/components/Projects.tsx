@@ -18,8 +18,11 @@ export interface ProjectProps {
         axios.get(`https://api.github.com/users/nesuarg/repos`)
             .then(res => {
                 const repos = res.data;
-
-                axios.get(`http://localhost:9000/githubcolors`)
+                let baseUrl = window.location.origin;
+                if(window.location.origin.indexOf("localhost")) {
+                    baseUrl = `http://localhost:9000/githubcolors`
+                }
+                axios.get(baseUrl)
                     .then(res => {
                         const colors = res.data;
 

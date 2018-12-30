@@ -5,7 +5,7 @@
   "homepage": "https://github.com/vikpe/react-webpack-typescript-starter",
   "scripts": {
     "build": "yarn run clean-dist && webpack -p --config=configs/webpack/prod.js",
-    "Prod": "yarn run clean-dist && webpack -p --config=configs/webpack/prod.js build:lambda",
+    "Prod": "yarn run build; yarn run build:lambda",
     "clean-dist": "rm -f -r -d dist",
     "lint": "tslint './src/**/*.ts*' --format stylish --force",
     "start": "yarn run start-dev",

@@ -8,10 +8,10 @@ export interface HeaderProps {
         return (
             <header className="header">
                 <nav>
-                    <ul>
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/projects'>Projects</Link></li>
-                        <li><Link to='/contact'>Contact</Link></li>
+                    <ul className="navigation">
+                        <li className="navigation__link"><Link to='/'>Home</Link></li>
+                        <li className="navigation__link"><Link to='/projects'>Projects</Link></li>
+                        <li className="navigation__link"><Link to='/contact'>Contact</Link></li>
                     </ul>
                 </nav>
             </header>

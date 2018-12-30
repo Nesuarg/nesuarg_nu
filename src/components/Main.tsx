@@ -1,12 +1,13 @@
 import * as React from "react";
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
+import axios from "axios";
 import Home from "./../components/Home";
 import Projects from "./../components/Projects";
 import Contact from "./../components/Contact";
 import "./../assets/scss/Main.scss";
 
 export interface MainProps {
-}export default class Main extends React.Component<MainProps, undefined> {
+}export default class Main extends React.Component<MainProps> {
 
     render() {
         return (

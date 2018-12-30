@@ -1,8 +1,6 @@
-.Projects {
-    flex-grow: 1;
-    padding: 12px;
-
-    .paper {
+.project {
+    &__paper {
+        background: #fff;
         padding: 12px;
     }
 }

@@ -12,26 +12,12 @@ export const appName = React.createContext("default value");
 export interface AppProps {
 }export default class App extends React.Component<AppProps> {
 
-    state = {
-        owner: {
-            name: '',
-        }
-    }
-
-    componentDidMount() {
-        axios.get(`https://api.github.com/users/nesuarg`)
-            .then(res => {
-                const owner = res.data;
-                this.setState({ owner });
-            })
-    }
-
     render() {
         return (
             <div className="app">
                 <Header/>
                 <Main/>
-                <Footer name={this.state.owner.name}/>
+                <Footer/>
             </div>
         );
     }

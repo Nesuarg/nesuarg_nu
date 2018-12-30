@@ -5,5 +5,11 @@
 .app {
   display: flex;
   flex-direction: column;
+  background-color: #fff;
   font-family: helvetica, arial, sans-serif;
+}
+
+.container {
+  flex-grow: 1;
+  padding: 12px;
 }

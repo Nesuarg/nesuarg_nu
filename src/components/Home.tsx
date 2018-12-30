@@ -6,6 +6,7 @@ export interface HomeProps {
     render() {
         return (
             <div className="home">
+            home
             </div>
         );
     }

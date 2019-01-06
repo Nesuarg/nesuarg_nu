@@ -30,6 +30,7 @@ export interface ProjectProps {
                         repos.forEach(element => {
                             for (var key in colors) {
                                 element.languageColor = colors[element.language];
+                                break;
                             }
                         });
                         this.setState({ repos });
@@ -44,7 +45,7 @@ export interface ProjectProps {
                     <Grid key={repo.id} item xs={12} md={6} lg={4}>
                         <Paper className="project__paper">
                             <a href={repo.html_url} target="blank">
-                                <Typography className="title" gutterBottom>
+                                <Typography variant="h3" className="title" gutterBottom>
                                     {repo.name}
                                 </Typography>
                                 <Typography className="description" gutterBottom>

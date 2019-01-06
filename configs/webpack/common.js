@@ -44,6 +44,13 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new HtmlWebpackPlugin({template: 'index.html.ejs',}),
+    new CopyWebpackPlugin([
+      {
+        from: 'assets/_redirects',
+        to: '',
+        flatten: true,
+      },
+    ]),
   ],
   externals: {
     'react': 'React',

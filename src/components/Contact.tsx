@@ -41,7 +41,7 @@ export interface ContactProps {
       <Grid className="contact" container justify="center">
         <form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
           <Grid item xs={12} lg={12}>
-            <TextField className="form-item" label="Name" name="Name" value={name} onChange={this.handleChange} />
+            <TextField className="form-item" label="Name" name="name" value={name} onChange={this.handleChange} />
           </Grid>
           <Grid item xs={12} lg={12}>
             <TextField className="form-item" label="Email" type="email" name="email" value={email} onChange={this.handleChange} />

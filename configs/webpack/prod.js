@@ -13,5 +13,11 @@ module.exports = merge(commonConfig, {
     publicPath: '/',
   },
   devtool: 'source-map',
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': '"https://www.nesuarg.com/.netlify/functions"'
+      }
+    })
+  ],
 });

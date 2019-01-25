@@ -20,10 +20,8 @@ export interface ProjectProps {
                 const repos = res.data;
                 let apiUrl = "";
                 
-                if(window.location.origin.includes("localhost")) {
-                    apiUrl = `http://localhost:9000/githubcolors`
-                }
-
+                apiUrl = process.env.NODE_ENV + "/githubcolors"
+                
                 axios.get(apiUrl)
                     .then(res => {
                         const colors = res.data;

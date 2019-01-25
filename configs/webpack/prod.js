@@ -22,7 +22,7 @@ module.exports = merge(commonConfig, {
       }
     }),
     new HtmlWebpackPlugin({
-      template: 'app/index.html'
+      template: resolve(__dirname, '../../dist/' + 'index.html')
     })
   ],
 });

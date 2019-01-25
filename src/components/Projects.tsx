@@ -20,7 +20,7 @@ export interface ProjectProps {
                 const repos = res.data;
                 let apiUrl = "";
                 
-                apiUrl = process.env.NODE_ENV + "/githubcolors"
+                apiUrl = process.env.API_ENV + "/githubcolors"
                 
                 axios.get(apiUrl)
                     .then(res => {

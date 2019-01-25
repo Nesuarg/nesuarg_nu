@@ -20,7 +20,7 @@ module.exports = merge(commonConfig, {
     new webpack.NamedModulesPlugin(), // prints more readable module names in the browser console on HMR updates
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': '"http://localhost:9000"'
+        'API_ENV': '"http://localhost:9000"'
       }
     })
   ]

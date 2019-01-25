@@ -17,7 +17,7 @@ module.exports = merge(commonConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': '"https://www.nesuarg.com/.netlify/functions"'
+        'API_ENV': '"https://www.nesuarg.com/.netlify/functions"'
       }
     })
   ],

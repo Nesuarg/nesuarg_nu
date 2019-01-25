@@ -1,5 +1,6 @@
 // production config
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const {resolve} = require('path');
 
@@ -19,6 +20,9 @@ module.exports = merge(commonConfig, {
       'process.env': {
         'API_ENV': '"https://www.nesuarg.com/.netlify/functions"'
       }
+    }),
+    new HtmlWebpackPlugin({
+      template: 'app/index.html'
     })
   ],
 });

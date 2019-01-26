@@ -6,12 +6,20 @@ import Projects from "./../components/Projects";
 import Contact from "./../components/Contact";
 import "./../assets/scss/Main.scss";
 
+const pattern = require("./../assets/img/pattern.svg");
+const reactLogo = require("./../assets/img/react_logo.svg");
+
+const background= {
+    backgroundImage: "url('" + pattern + "')" 
+}
+
 export interface MainProps {
 }export default class Main extends React.Component<MainProps> {
 
     render() {
-        return (
-            <main className="main">
+        return (            
+            <main style={background}>
+                <img src={reactLogo} height="480"/>
             <Switch>
               <Route exact path='/' component={Home}/>
               <Route path='/projects' component={Projects}/>

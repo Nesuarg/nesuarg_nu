@@ -24,7 +24,7 @@ export interface HomeProps {
         return (
             <Grid className="home" container>
                 <Grid container xs={12} justify="center" direction="column">
-                    <Typography className="home__headline" variant="h1">Hello,</Typography>
+                    <h1 className="home__headline">Hello.</h1>
                     <Typography className="home__subline" variant="h3" gutterBottom>I'm {this.state.owner.name}, this site contains my Github Projects, like this site, which can be forked</Typography>
                 </Grid>
             </Grid>

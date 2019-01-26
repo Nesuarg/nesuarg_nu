@@ -5,8 +5,10 @@
 .app {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  font-family: helvetica, arial, sans-serif;
+  background-color: #ffffff;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  
+  h1, h2, h3 {font-family: 'Anton', sans-serif; }
 
   a {
     text-decoration: none;

@@ -1,0 +1,16 @@
+.welcome {
+    background-color: var(--themePrimary);
+    color: var(--themeLight);
+    &__container {
+        display:flex;
+        height: 70vh;
+        min-height: 350px;
+    }
+    &__link {
+        color: #fff;
+
+        &:hover, &:active {
+            color: #fff;
+        }
+    }
+}

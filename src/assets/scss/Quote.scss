@@ -1,0 +1,10 @@
+.quote {
+    background-color: var(--themeLight);
+    color: var(--themePrimary);
+    &__container {
+        display:flex;
+        height: 35vh;
+        min-height: 350px;
+
+    }
+}

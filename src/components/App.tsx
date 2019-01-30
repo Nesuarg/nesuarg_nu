@@ -1,11 +1,10 @@
 import * as React from "react";
-import axios from "axios";
-import "./../assets/scss/Reset.scss";
 import "./../assets/scss/App.scss";
-import "./../components/Contact";
-import Header from "./../components/Header";
-import Main from "./../components/Main";
+import Welcome from "./../components/Welcome";
 import Footer from "./../components/Footer";
+import Projects from "./../components/Projects";
+import Quote from "./../components/Quote";
+import Contact from "./../components/Contact";
 
 require('typeface-anton')
 
@@ -16,11 +15,13 @@ export interface AppProps {
 
     render() {
         return (
-            <div className="app">
-                <Header/>
-                <Main/>
+            <main className="app">
+                <Welcome/>
+                <Projects/>
+                <Quote/>
+                <Contact name="" email="" message=""/>
                 <Footer/>
-            </div>
+            </main>
         );
     }
 }

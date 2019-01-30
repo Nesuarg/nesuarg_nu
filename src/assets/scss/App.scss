@@ -1,21 +1,56 @@
-#root, .app {
-  height: 100%;
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  font-family: 'Arial Narrow Bold', sans-serif;
-  
-  h1, h2, h3 {font-family: 'Anton', sans-serif; }
+html body {
+  font: 1rem/1.5 var(--font-family-monospace);
 
   a {
     text-decoration: none;
+    color: var(--themePrimary);
+    box-shadow: inset 0 -0.475em 0 rgba(163,218,227,0.5);
+    box-shadow: inset 0 -0.075em 0 var(--themeSecondary);
+    
+    transition: all 200ms 50ms ease-out;
+    &:hover, &:focus {
+        text-decoration: none;
+        color: var(--themePrimary);
+        background-color: rgba(163,218,227,0.5);
+        background-color: var(--themeSecondary);
+        box-shadow: inset 0 -0.475em 0 transparent;
+    }
   }
 }
 
-.container {
-  flex-grow: 1;
-  padding: 12px;
+.btn.btn-secondarytheme {
+  color: #fff;
+  background-color: transparent;
+  border-color: var(--themeSecondary); 
+  &:hover {
+    color: #fff;
+    background-color:var(--themeSecondary); 
+    border-color: var(--themeSecondary);
+  }
 }
+.btn.btn-primarytheme {
+  color: var(--themePrimary);
+  background-color: transparent;
+  border-color: var(--themePrimary); 
+  &:hover {
+    color: #fff;
+    background-color:var(--themePrimary); 
+    border-color: var(--themePrimary);
+  }
+}
+$theme-colors: (
+  "themePrimary": #002b36,
+  "themeSecondary": #cb4b16,
+  "themeLight": #e1e1e1,
+  "themeDark": #657b83,
+  "neutralPrimary": #e1e1e1,
+  "neutralDark": #151515,
+  "neutralLight": #cb4b16,
+);
+
+.last-item {
+  margin-left: 15px;
+}
+
+$enable-rounded: false;
+@import "node_modules/bootstrap/scss/bootstrap";

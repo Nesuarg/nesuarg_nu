@@ -1,8 +1,6 @@
 import * as React from "react";
-import Grid from "@material-ui/core/Grid"
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 import "./../assets/scss/Contact.scss";
+import { Row, Container, Col, Form, FormGroup, Label, Input, FormText, Button } from 'reactstrap';
 
 const encode = (data) => {
   return Object.keys(data)
@@ -38,30 +36,45 @@ export interface ContactProps {
   render() {
     const { name, email, message } = this.state as ContactProps;
     return (
-      <Grid className="contact" container justify="center">
-        <form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
-          <Grid item xs={12} lg={12}>
-            <TextField className="form-item" label="Name" name="name" value={name} onChange={this.handleChange} />
-          </Grid>
-          <Grid item xs={12} lg={12}>
-            <TextField className="form-item" label="Email" type="email" name="email" value={email} onChange={this.handleChange} />
-          </Grid>
-          <Grid item xs={12} lg={12}>
-            <TextField className="form-item" label="message" multiline rows="5" name="message" value={message} onChange={this.handleChange} />
-          </Grid>
-          <Grid item xs={12} lg={12}>
-            <Button className="form-item" type="submit" variant="contained" color="primary">Send</Button>
-          </Grid>
-          <input type="hidden" name="form-name" value="contact" />
-        </form>
-      </Grid>
-
-
-
-
-
-
-
+      // <Grid className="contact" container justify="center">
+      //   <form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
+      //     <Grid item xs={12} lg={12}>
+      //       <TextField className="form-item" label="Name" name="name" value={name} onChange={this.handleChange} />
+      //     </Grid>
+      //     <Grid item xs={12} lg={12}>
+      //       <TextField className="form-item" label="Email" type="email" name="email" value={email} onChange={this.handleChange} />
+      //     </Grid>
+      //     <Grid item xs={12} lg={12}>
+      //       <TextField className="form-item" label="message" multiline rows="5" name="message" value={message} onChange={this.handleChange} />
+      //     </Grid>
+      //     <Grid item xs={12} lg={12}>
+      //       <Button className="form-item" type="submit" variant="contained" color="primary">Send</Button>
+      //     </Grid>
+      //     <input type="hidden" name="form-name" value="contact" />
+      //   </form>
+      // </Grid>
+      <Row>
+        <Container className="contact py-5">
+          <Col xs="4">
+            <Form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
+              <FormGroup>
+                <Label>Name</Label>
+                <Input type="text" name="name" value={name} onChange={this.handleChange}></Input>
+              </FormGroup>
+              <FormGroup>
+                <Label>Email</Label>
+                <Input type="email" name="email" value={email} onChange={this.handleChange}></Input>
+              </FormGroup>
+              <FormGroup>
+                <Label>Message</Label>
+                <Input type="textarea" name="message" value={message} onChange={this.handleChange}></Input>
+              </FormGroup>
+              <Button type="submit" className="btn btn-primary">wuush</Button>
+              <input type="hidden" name="form-name" value="contact" />
+            </Form>
+          </Col>
+        </Container>
+      </Row>
     );
   }
 }

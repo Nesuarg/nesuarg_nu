@@ -1,14 +1,10 @@
 import * as React from "react";
 import axios from "axios";
-import Grid from "@material-ui/core/Grid"
-import Typography from "@material-ui/core/Typography";
-import Avatar from '@material-ui/core/Avatar';
-import Paper from '@material-ui/core/Paper';
+import { Row, Col, Container, Card, CardBody } from "reactstrap";
 import "./../assets/scss/Projects.scss";
-import { colors } from "@material-ui/core";
 
 export interface ProjectProps {
-}export default class Header extends React.Component<ProjectProps> {
+}export default class Projects extends React.Component<ProjectProps> {
 
     state = {
         repos: []
@@ -19,9 +15,9 @@ export interface ProjectProps {
             .then(res => {
                 const repos = res.data;
                 let apiUrl = "";
-                
+
                 apiUrl = process.env.API_ENV + "/githubcolors"
-                
+
                 axios.get(apiUrl)
                     .then(res => {
                         const colors = res.data;
@@ -40,26 +36,25 @@ export interface ProjectProps {
 
     render() {
         return (
-            <Grid className="project" container spacing={24} justify="center" wrap="wrap">
-                {this.state.repos.map(repo =>
-                    <Grid key={repo.id} item xs={12} md={6} lg={4}>
-                        <Paper className="project__paper">
-                            <a href={repo.html_url} target="blank">
-                                <Typography variant="h3" className="title" gutterBottom>
-                                    {repo.name}
-                                </Typography>
-                                <Typography className="description" gutterBottom>
-                                    {repo.description}
-                                </Typography>
-                                <Avatar style={{ backgroundColor: repo.languageColor }}></Avatar>
-                                <Typography className="language" gutterBottom>
-                                    {repo.language}
-                                </Typography>
-                            </a>
-                        </Paper>
-                    </Grid>
-                )}
-            </Grid>
+            <section className="album py-5 project">
+                <Container>
+                    <div className="row">
+                        {this.state.repos.map(repo =>
+                            <Col xs="12" md="6" lg="4" className="project__card">
+                                <Card>
+                                    <CardBody>
+                                        <div className="project__devider" style={{ backgroundColor: repo.languageColor }}><h6 className="card-subtitle">{repo.language}</h6></div>
+                                            <h5 className="card-title">{repo.name}</h5>                                            
+                                        <p className="card-text">{repo.description}</p>
+                                        <a href={repo.html_url} className="card-link">Github</a>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                        )}
+                        <div className="col-md-6 col-lg-4 mb-4 project__card"></div>
+                    </div>
+                </Container>
+            </section>
         );
     }
 }

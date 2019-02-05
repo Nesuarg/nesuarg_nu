@@ -29,7 +29,7 @@ export interface WelcomeProps {
                 <Container className="welcome__container bg-near-white">
                     <div className="align-self-center">
                         <h1 className="welcome__headline">Hello.</h1>
-                        <h2>I'm {this.state.owner.name}, I like {}</h2>
+                        <h2>I'm {this.state.owner.name}, I do frontend development</h2>
                         <a className="welcome__link" href="https://github.com/nesuarg">
                             <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                             &nbsp;@nesuarg

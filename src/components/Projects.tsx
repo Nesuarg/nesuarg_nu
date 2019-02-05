@@ -41,12 +41,12 @@ export interface ProjectProps {
                     <div className="row">
                         {this.state.repos.map(repo =>
                             <Col xs="12" md="6" lg="4" className="project__card">
-                                <Card>
+                                <Card style={{ border: '2px solid' + repo.languageColor }}>
                                     <CardBody>
-                                        <div className="project__devider" style={{ backgroundColor: repo.languageColor }}><h6 className="card-subtitle">{repo.language}</h6></div>
-                                            <h5 className="card-title">{repo.name}</h5>                                            
+                                        <div className="project__devider" style={{ color: repo.languageColor }}><h6>{repo.language}</h6></div>
+                                            <h5>{repo.name}</h5>                                            
                                         <p className="card-text">{repo.description}</p>
-                                        <a href={repo.html_url} className="card-link">Github</a>
+                                        <a href={repo.html_url} className="card-link">Go to project</a>
                                     </CardBody>
                                 </Card>
                             </Col>

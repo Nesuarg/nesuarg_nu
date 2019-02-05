@@ -55,7 +55,9 @@ export interface ContactProps {
       // </Grid>
       <Row>
         <Container className="contact py-5">
-          <Col xs="4">
+          <Col xs="12" md="6" lg="6">
+          <h4>Contact me</h4>
+          <h6>With any business inquiries, or just a chat</h6>
             <Form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
               <FormGroup>
                 <Label>Name</Label>
